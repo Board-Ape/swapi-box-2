@@ -1,19 +1,24 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Header from '../Header/Header';
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
-      crawlFilm: ''
+      crawlFilm: '',
+      favorites: ['1','2','3','4'],
+      characters: ['Sam', 'Jorge', 'Jason'],
+      worlds: ['Mars', 'Venus', 'Earth'],
+      vehicles: ['Rover', 'Mercedes', 'BMW']
     };
   }
 
   async componentDidMount() {
     const initialFetch = await fetch('https://swapi.co/api/films/');
     const responseFilmData = await initialFetch.json();
-    const crawlFilmData = responseFilmData.results.map( film => film.opening_crawl );
+    const crawlFilmData =
+      responseFilmData.results.map( film => film.opening_crawl );
     const crawlFilm = this.randomlyGenerateCrawl(crawlFilmData);
     this.setState({crawlFilm})
   }
@@ -27,6 +32,10 @@ class App extends Component {
     return (
       <div className="App">
         <p>{this.state.crawlFilm}</p>
+        <Header favorites={this.state.favorites}
+                characters={this.state.characters}
+                worlds={this.state.worlds}
+                vehicles={this.state.vehicles}/>
       </div>
     );
   }

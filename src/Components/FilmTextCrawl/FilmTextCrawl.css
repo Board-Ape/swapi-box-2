@@ -1,0 +1,57 @@
+.film-crawl h3, .film-crawl h4, .film-crawl h5, .film-crawl p {
+  font-family: 'News Gothic Std', sans-serif;
+  font-weight: 900;
+  color: #ffd600; }
+
+.film-crawl h3 {
+  font-family: franklin-gothic-ext-comp-urw, sans-serif;
+  font-size: 130px;
+  margin-bottom: 22px; }
+
+.film-crawl h3, .film-crawl h5 {
+  text-align: center;
+  margin-top: 20px; }
+
+.film-crawl h5 {
+  margin-bottom: 20px;
+  font-size: 60px; }
+
+.film-crawl p {
+  line-height: 1.4;
+  font-size: 55px;
+  margin-top: 0; }
+
+.film-crawl {
+  position: absolute;
+  width: 18em;
+  height: 50em;
+  bottom: 0;
+  left: 50%;
+  margin-left: -9em;
+  font-size: 350%;
+  font-weight: bold;
+  text-align: justify;
+  overflow: hidden;
+  transform-origin: 50% 100%;
+  transform: perspective(300px) rotateX(15deg); }
+
+.film-crawl:after {
+  position: absolute;
+  content: ' ';
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 60%;
+  background-image: linear-gradient(top, black 0%, transparent 100%);
+  pointer-events: none; }
+
+.crawl-content {
+  position: absolute;
+  top: 100%;
+  animation: scroll 150s linear 4s infinite; }
+
+@keyframes scroll {
+  0% {
+    top: 100%; }
+  100% {
+    top: -170%; } }

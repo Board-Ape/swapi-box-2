@@ -8,10 +8,12 @@ class App extends Component {
     super();
     this.state = {
       // crawlFilm: '',
-      favorites: [],
+      containerTitle: '',
+      favorites: ['1','2'],
       characters: [],
       worlds: ['Mars', 'Venus', 'Earth'],
-      vehicles: ['Rover', 'Mercedes', 'BMW']
+      vehicles: ['Rover', 'Mercedes', 'BMW'],
+      loading: false
     };
   }
 
@@ -46,15 +48,22 @@ class App extends Component {
     return Promise.all(charactersArray)
   }
 
+  handleUpdateState = async (updateType) => {
+    let array = await this.getCharacters;
+    this.setState({containerTitle: 'Characters',
+                    loading: true,
+                    worlds: [],
+                    vehicles: []})
+  }
+
   render() {
     return (
       <div className="App">
         // <p>{this.state.crawlFilm}</p>
-        <Header fetchCharacters={this.getCharacters}
-                favorites={this.state.favorites}
-                characters={this.state.characters}
-                worlds={this.state.worlds}
-                vehicles={this.state.vehicles} />
+        <Header handleUpdateState={this.handleUpdateState}
+                getCharacters={this.getCharacters}
+                favorites={this.state.favorites}                
+                 />
         <FilmTextCrawl />
       </div>
     );

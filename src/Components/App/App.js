@@ -8,8 +8,8 @@ class App extends Component {
     super();
     this.state = {
       // crawlFilm: '',
-      favorites: ['1','2','3','4'],
-      characters: ['Sam', 'Jorge', 'Jason'],
+      favorites: [],
+      characters: [],
       worlds: ['Mars', 'Venus', 'Earth'],
       vehicles: ['Rover', 'Mercedes', 'BMW']
     };
@@ -29,19 +29,32 @@ class App extends Component {
   //   return crawlFilmData[randomNumber];
   // }
 
-  passingPropsFunction = () => {
-    console.log('You are passing props');
-  };
+  getCharacters = async () => {
+    const fetchCharacters = await fetch('https://swapi.co/api/people/')
+    const responseCharacters = await fetchCharacters.json()
+    console.log(responseCharacters);
+    const charactersArray = responseCharacters.results.map( async (characters) => {
+      const fetchHomeworld = await fetch(characters.homeworld);
+      const homeworld = await fetchHomeworld.json();
+      const fetchSpecies = await fetch(characters.species[0]);
+      const species = await fetchSpecies.json();
+      return {name: characters.name,
+              homeworld: homeworld.name,
+              species: species.name,
+              homePop: homeworld.population}
+    })
+    return Promise.all(charactersArray)
+  }
 
   render() {
     return (
       <div className="App">
         // <p>{this.state.crawlFilm}</p>
-        <Header favorites={this.state.favorites}
+        <Header fetchCharacters={this.getCharacters}
+                favorites={this.state.favorites}
                 characters={this.state.characters}
                 worlds={this.state.worlds}
-                vehicles={this.state.vehicles}
-                passingPropsFunction={this.passingPropsFunction}/>
+                vehicles={this.state.vehicles} />
         <FilmTextCrawl />
       </div>
     );

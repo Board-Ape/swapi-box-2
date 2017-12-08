@@ -3,9 +3,11 @@ import './Header.css';
 
 const Header = (props) => {
   console.log(props);
+  console.log(props.passingPropsFunction());
+
   return (
     <div className='header-component'>
-      <h1>Stawwy-Box</h1>
+      <h1>Star-Swapi-Box</h1>
       <h3>Favorites <span>{props.favorites.length}</span></h3>
       <div>
         <button onClick={props.fetchCharacters}>Characters</button>

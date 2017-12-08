@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 import './App.css';
 import Header from '../Header/Header';
+import FilmTextCrawl from '../FilmTextCrawl/FilmTextCrawl';
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
-      crawlFilm: '',
+      // crawlFilm: '',
       favorites: ['1','2','3','4'],
       characters: ['Sam', 'Jorge', 'Jason'],
       worlds: ['Mars', 'Venus', 'Earth'],
@@ -14,28 +15,34 @@ class App extends Component {
     };
   }
 
-  async componentDidMount() {
-    const initialFetch = await fetch('https://swapi.co/api/films/');
-    const responseFilmData = await initialFetch.json();
-    const crawlFilmData =
-      responseFilmData.results.map( film => film.opening_crawl );
-    const crawlFilm = this.randomlyGenerateCrawl(crawlFilmData);
-    this.setState({crawlFilm})
-  }
+  // async componentDidMount() {
+  //   const initialFetch = await fetch('https://swapi.co/api/films/');
+  //   const responseFilmData = await initialFetch.json();
+  //   const crawlFilmData =
+  //     responseFilmData.results.map( film => film.opening_crawl );
+  //   const crawlFilm = this.randomlyGenerateCrawl(crawlFilmData);
+  //   this.setState({crawlFilm})
+  // }
 
-  randomlyGenerateCrawl(crawlFilmData) {
-    const randomNumber = Math.floor((Math.random() * crawlFilmData.length));
-    return crawlFilmData[randomNumber];
-  }
+  // randomlyGenerateCrawl(crawlFilmData) {
+  //   const randomNumber = Math.floor((Math.random() * crawlFilmData.length));
+  //   return crawlFilmData[randomNumber];
+  // }
+
+  passingPropsFunction = () => {
+    console.log('You are passing props');
+  };
 
   render() {
     return (
       <div className="App">
-        <p>{this.state.crawlFilm}</p>
+        // <p>{this.state.crawlFilm}</p>
         <Header favorites={this.state.favorites}
                 characters={this.state.characters}
                 worlds={this.state.worlds}
-                vehicles={this.state.vehicles}/>
+                vehicles={this.state.vehicles}
+                passingPropsFunction={this.passingPropsFunction}/>
+        <FilmTextCrawl />
       </div>
     );
   }

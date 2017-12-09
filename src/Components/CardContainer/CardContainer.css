@@ -1,0 +1,7 @@
+.card-container-component {
+  text-align: center;
+  color: #fff; }
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap; }

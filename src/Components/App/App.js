@@ -10,7 +10,7 @@ class App extends Component {
 
 		this.state = {
 			favorites: [],
-			containerTitle: 'select nerdy item',
+			containerTitle: 'Select The Force',
 			characters: [],
 			worlds: [],
 			vehicles: [],
@@ -38,6 +38,7 @@ class App extends Component {
 	getWorlds = async () => {
 		const fetchWorlds = await fetch('https://swapi.co/api/planets/')
 		const worldsObj = await fetchWorlds.json();
+		console.log(worldsObj)
 		const worldsArray = worldsObj.results.map( async (world) => {
 			const residentArray = await world.residents.map( async (resident) => {
 				const newResident = await fetch(resident);
@@ -58,6 +59,7 @@ class App extends Component {
 	getVehicles = async () => {
 		const fetchVehicles = await fetch('https://swapi.co/api/vehicles/')
 		const vehiclesObj = await fetchVehicles.json();
+		console.log(vehiclesObj);
 		const vehiclesArray = vehiclesObj.results.map( async (vehicle) => {
 			return {name: vehicle.name,
 							model: vehicle.model,

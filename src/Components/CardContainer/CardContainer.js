@@ -2,7 +2,10 @@ import React from 'react';
 import './CardContainer.css';
 import Card from '../Card/Card.js';
 
-const CardContainer = ({ containerTitle, characters, worlds, vehicles, favorites, favoriteCardFunc }) => {
+const CardContainer = ({ containerTitle,
+													favoriteCard,
+													active,
+													items }) => {
 
 		const displayChars = characters.map((character, index) => {
 			return <Card name={character.name}

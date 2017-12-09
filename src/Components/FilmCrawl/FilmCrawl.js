@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import fetchFilmTextCrawl from '../helper/helper';
-import './FilmTextCrawl.css';
+import './FilmCrawl.css';
 
-class FilmTextCrawl extends Component {
+class FilmCrawl extends Component {
   constructor() {
     super();
     this.state = {
@@ -35,4 +35,4 @@ class FilmTextCrawl extends Component {
   }
 };
 
-export default FilmTextCrawl;
+export default FilmCrawl;

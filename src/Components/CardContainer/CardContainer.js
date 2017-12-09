@@ -7,7 +7,14 @@ const CardContainer = ({ containerTitle,
 													active,
 													items }) => {
 
-		let displayItems = items.filter(item => item.cardType === active);
+		let displayItems;
+
+		if (active === 3) {
+			displayItems = items.filter(item => item.favorite === true);
+		} else {
+			displayItems = items.filter(item => item.cardType === active);
+		}
+
 		let currentDisplay = displayItems.map((item) => {
 			return <Card name={item.name}
 						 lineOne={item.lineOne}

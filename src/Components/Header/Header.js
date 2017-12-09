@@ -5,11 +5,11 @@ const Header = ({favorites, getWorlds, getVehicles, handleUpdateState}) => {
   return (
     <div className='header-component'>
       <h1>Star-Swapi-Box</h1>
-      <h3>Favorites <span>{favorites.length}</span></h3>
+      <h6>Favorites <span>(number)</span></h6>
       <div>
-        <button onClick={() => handleUpdateState('characters')}>Characters</button>
-        <button onClick={() => handleUpdateState('worlds')}>Worlds</button>
-				<button onClick={() => handleUpdateState('vehicles')}>Vehicles</button>
+        <button onClick={() => handleUpdateState(0)}>Characters</button>
+        <button onClick={() => handleUpdateState(1)}>Worlds</button>
+				<button onClick={() => handleUpdateState(2)}>Vehicles</button>
       </div>
     </div>
   );

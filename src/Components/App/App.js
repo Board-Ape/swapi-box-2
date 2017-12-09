@@ -112,7 +112,7 @@ class App extends Component {
 	// 	this.setState({[updateType]: array, loading: false})
 	// }
 
-	favoriteCard = (cardObj) => {
+	favoriteCard = (id) => {
 		let getCardIndex = this.state.items.findIndex(item => item.id === id)
 		let newState = this.state.items;
 		newState[getCardIndex].favorite = !newState[getCardIndex].favorite;

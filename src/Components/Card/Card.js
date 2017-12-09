@@ -1,7 +1,14 @@
 import React from 'react';
 import './Card.css';
 
-const Card = ({name, lineOne, lineTwo, lineThree, lineFour, type, favoriteCardFunc}) => {
+const Card = ({name,
+                lineOne,
+                lineTwo,
+                lineThree,
+                lineFour,
+                id,
+                cardType,
+                favoriteCard}) => {
   const titleOne = ['Homeworld: ', 'Terrain: ', 'Model: '];
   const titleTwo = ['Species: ', 'Population: ', 'Class: '];
   const titleThree = ['Homeworld Population: ', 'Climate: ', 'Passengers: '];
@@ -9,11 +16,12 @@ const Card = ({name, lineOne, lineTwo, lineThree, lineFour, type, favoriteCardFu
 
   let cardDisplay = (
     <div>
+      <button onClick={() => favoriteCard(id)}>ADD</button>
       <h3>{name}</h3>
-      <h4>{titleOne[type]}{lineOne}</h4>
-      <h4>{titleTwo[type]}{lineTwo}</h4>
-      <h4>{titleThree[type]}{lineThree}</h4>
-      <h4>{titleFour[type]}{lineFour}</h4>
+      <h4>{titleOne[cardType]}{lineOne}</h4>
+      <h4>{titleTwo[cardType]}{lineTwo}</h4>
+      <h4>{titleThree[cardType]}{lineThree}</h4>
+      <h4>{titleFour[cardType]}{lineFour}</h4>
     </div>
   );
   return (

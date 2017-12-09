@@ -1,7 +1,7 @@
 import React from 'react';
 import './Card.css';
 
-const Card = ({name, lineOne, lineTwo, lineThree, lineFour, type, favoriteCard}) => {
+const Card = ({name, lineOne, lineTwo, lineThree, lineFour, type, favoriteCardFunc}) => {
   const titleOne = ['Homeworld: ', 'Terrain: ', 'Model: '];
   const titleTwo = ['Species: ', 'Population: ', 'Class: '];
   const titleThree = ['Homeworld Population: ', 'Climate: ', 'Passengers: '];

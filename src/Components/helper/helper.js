@@ -30,7 +30,7 @@ const pullOpeningCrawl = (rawData) => {
 	if (releaseDate[0] === '11') {releaseDate[0] = 'November'}
 	if (releaseDate[0] === '12') {releaseDate[0] = 'December'}
 
-	const lineBreakRegEx = new RegExp(/\s{3,}/, 'g')
+	const lineBreakRegEx = new RegExp(/\s{4,}/, 'g')
 
 	const formattedDate = `${releaseDate[0]} ${releaseDate[1]}, ${releaseDate[2]}`
 	const filmTitle = rawData.title.toUpperCase();

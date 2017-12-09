@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import fetchFilmTextCrawl from '../helper/helper';
+import pullOpeningCrawl from '../helper/helper';
 import './FilmCrawl.css';
 
 class FilmCrawl extends Component {
@@ -11,15 +11,21 @@ class FilmCrawl extends Component {
   }
 
   componentDidMount() {
-    const storyCrawl = fetchFilmTextCrawl(7);
-    this.setState({ story: storyCrawl });
-  }
+		let randomFilm = Math.ceil(Math.random() * 7)
+
+		fetch(`https://swapi.co/api/films/${randomFilm}/`)
+		  .then(data => data.json())
+		  .then(data => {
+        const filmCrawl = pullOpeningCrawl(data);
+
+        this.setState({ story: filmCrawl })
+		})
+	}
 
   render() {
     return(
       <div className='film-crawl'>
         <div className='crawl-content'>
-
           <h5>Episode {this.state.story.episode}</h5>
           <h3>{this.state.story.title}</h3>
           {this.state.story.crawl &&
@@ -29,6 +35,7 @@ class FilmCrawl extends Component {
               <p>{this.state.story.crawl[2]}</p>
             </div>
           }
+          <h4>{this.state.story.date}</h4>
         </div>
       </div>
     )

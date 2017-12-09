@@ -1,13 +1,14 @@
 import React from 'react';
 import './Header.css';
 
-const Header = ({favorites, handleUpdateState}) => {
+const Header = ({favorites, getWorlds, handleUpdateState}) => {
   return (
     <div className='header-component'>
       <h1>Star-Swapi-Box</h1>
       <h3>Favorites <span>{favorites.length}</span></h3>
       <div>
-        <button onClick={() => {console.log('hi');handleUpdateState('characters')}}>Character</button>
+        <button onClick={() => {handleUpdateState('characters')}}>Character</button>
+        <button onClick={() => {handleUpdateState('worlds')}}>Worlds</button>
       </div>
     </div>
   );

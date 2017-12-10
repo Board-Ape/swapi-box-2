@@ -1,10 +1,10 @@
 .film-crawl h3, .film-crawl h4, .film-crawl h5, .film-crawl p {
-  font-family: 'News Gothic Std', sans-serif;
+  font-family: 'Spectral SC', serif;
   font-weight: 900;
   color: #ffd600; }
 
 .film-crawl h3 {
-  font-family: franklin-gothic-ext-comp-urw, sans-serif;
+  font-family: 'Spectral SC', serif;
   font-size: 130px;
   margin-bottom: 22px; }
 
@@ -33,7 +33,7 @@
   text-align: justify;
   overflow: hidden;
   transform-origin: 50% 100%;
-  transform: perspective(300px) rotateX(15deg); }
+  transform: perspective(300px) rotateX(25deg); }
 
 .film-crawl:after {
   position: absolute;
@@ -42,7 +42,7 @@
   right: 0;
   top: 0;
   bottom: 60%;
-  background-image: linear-gradient(top, black 0%, transparent 100%);
+  background-image: linear-gradient(to bottom, black 0%, transparent 100%);
   pointer-events: none; }
 
 .crawl-content {

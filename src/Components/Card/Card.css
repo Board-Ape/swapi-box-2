@@ -1,5 +1,57 @@
 .card-component {
-  width: 240px;
+  background-color: rgba(245, 5, 5, 0.9);
+  width: 300px;
+  height: 399px;
   padding: 20px;
   margin: 10px;
-  background-color: rgba(255, 255, 255, 0.2); }
+  border: 10px solid rgba(255, 255, 255, 0.1);
+  border-radius: 25px;
+  position: relative; }
+  .card-component .card-header-box {
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: left; }
+  .card-component h3 {
+    color: #fff;
+    font-size: 22px;
+    width: 171px;
+    overflow: scroll;
+    height: 64px;
+    padding: 3px 0; }
+  .card-component h4 {
+    font-size: 19px;
+    color: #fff;
+    line-height: 1.4; }
+  .card-component span {
+    color: rgba(255, 255, 255, 0.6);
+    font-weight: 400; }
+  .card-component button {
+    background: none;
+    border: none;
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    cursor: pointer; }
+  .card-component .star-outline {
+    width: 60px;
+    height: 60px;
+    background-image: url("add-heart-empty.svg");
+    opacity: .4;
+    background-repeat: no-repeat; }
+  .card-component .star-outline:hover {
+    opacity: 1; }
+  .card-component .star-solid {
+    width: 60px;
+    height: 60px;
+    background-image: url("add-heart-filled.svg");
+    background-repeat: no-repeat; }
+  .card-component .overflow {
+    height: 96px;
+    overflow: scroll; }
+  .card-component ::-webkit-scrollbar {
+    width: 0px;
+    background: transparent; }
+
+.fave-card {
+  border: 10px solid rgba(42, 252, 255, 0.15); }

@@ -1,34 +1,33 @@
 import React from 'react';
 import './Card.css';
 
-const Card = ({name,
-                lineOne,
-                lineTwo,
-                lineThree,
-                lineFour,
-                id,
-                cardType,
-                favoriteCard}) => {
-  const titleOne = ['Homeworld: ', 'Terrain: ', 'Model: '];
-  const titleTwo = ['Species: ', 'Population: ', 'Class: '];
-  const titleThree = ['Homeworld Population: ', 'Climate: ', 'Passengers: '];
-  const titleFour = ['', 'Known Residents: ', ''];
+const Card = ({name, lineOne, lineTwo, lineThree, lineFour, id, cardType, favoriteStatus, favoriteCard}) => {
 
-  let cardDisplay = (
-    <div>
-      <button onClick={() => favoriteCard(id)}>ADD</button>
-      <h3>{name}</h3>
-      <h4>{titleOne[cardType]}{lineOne}</h4>
-      <h4>{titleTwo[cardType]}{lineTwo}</h4>
-      <h4>{titleThree[cardType]}{lineThree}</h4>
-      <h4>{titleFour[cardType]}{lineFour}</h4>
-    </div>
-  );
-  return (
-    <div className='card-component'>
-      {cardDisplay}
-    </div>
-  )
+	const lineOneTitle = ['Homeworld: ', 'Terrain: ', 'Model: ']
+	const lineTwoTitle = ['Species: ', 'Population: ', 'Class: ']
+	const lineThreeTitle = ['Homeworld Population: ', 'Climate: ', 'Passengers: ']
+	const lineFourTitle = ['', 'Known Residents: ', '']
+
+	let cardDisplay = (
+		<div className="card-display">
+			<div className="card-header-box">
+				<h3>{name}</h3>
+			</div>
+			<h4><span>{lineOneTitle[cardType]} </span>{lineOne}</h4>
+			<h4><span>{lineTwoTitle[cardType]} </span>{lineTwo}</h4>
+			<h4><span>{lineThreeTitle[cardType]} </span>{lineThree}</h4>
+			<h4 className="overflow"><span>{lineFourTitle[cardType]} </span>{lineFour}</h4>
+			<button onClick={() => favoriteCard(id)}
+				className={ favoriteStatus === false ? 'star-outline' : 'star-solid' }
+			></button>
+		</div>
+	)
+
+	return (
+		<div className={ favoriteStatus === false ? 'card-component' : 'card-component fave-card'}>
+			{cardDisplay}
+		</div>
+	)
 }
 
 export default Card;

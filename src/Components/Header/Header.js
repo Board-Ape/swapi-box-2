@@ -2,18 +2,19 @@ import React from 'react';
 import './Header.css';
 
 const Header = ({handleUpdateState, numberOfFavorites}) => {
-  return (
-    <div className='header-component'>
-      <h1>Star-Swapi-Box</h1>
-      <h6>Favorites <span>{numberOfFavorites}</span></h6>
-      <div>
-        <button onClick={() => handleUpdateState(0)}>Characters</button>
-        <button onClick={() => handleUpdateState(1)}>Worlds</button>
-				<button onClick={() => handleUpdateState(2)}>Vehicles</button>
-				<button onClick={() => handleUpdateState(3)}>Favorites</button>
-      </div>
-    </div>
-  );
+
+	return (
+		<div className="header-component">
+			<div className="logo"></div>
+      <div className="header-title">Swapi-Box</div>
+			<div className="header-buttons">
+				<button onClick={() => handleUpdateState(0)}>CHARACTERS</button>
+				<button onClick={() => handleUpdateState(1)}>WORLDS</button>
+				<button onClick={() => handleUpdateState(2)}>VEHICLES</button>
+				<button onClick={() => handleUpdateState(3)}>FAVORITES<span>{numberOfFavorites}</span></button>
+			</div>
+		</div>
+	);
 };
 
 export default Header;

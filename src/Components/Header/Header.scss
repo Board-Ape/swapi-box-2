@@ -1,3 +1,61 @@
 .header-component {
-  background-color: yellow;
+	width: 1273px;
+	margin: auto;
+  background-color: #004C96;
+
+	h1 {
+		color: #fff;
+		text-align: center;
+	}
+
+	.logo {
+		background-image: url('x-wing.svg');
+		width: 300px;
+		height: 162px;
+		background-repeat: no-repeat;
+    padding-top: 30px;
+		margin: 0 auto;
+	}
+
+  .header-title {
+    font-size: 40px;
+  }
+
+	.header-buttons {
+		display: flex;
+		justify-content: space-around;
+		margin-bottom: 9px;
+	}
+
+	button {
+		border: none;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background-color: #5195D9;
+		height: 40px;
+		width: 220px;
+    font-family: 'Spectral SC', serif;
+		font-weight: 900;
+		position: relative;
+		font-size: 20px;
+		color: #fff;
+		overflow: hidden;
+		cursor: pointer;
+		padding-top: 4px;
+		border-radius: 20px;
+	}
+
+	button:hover {
+		background-color: rgba(42,252,255, .8);
+		box-shadow: 0px 0px 56px -6px rgba(219,226,255,1);
+	}
+
+	span {
+		position: absolute;
+		right: 0;
+		top: -5px;
+		background-color: rgba(0,93,94, .5);
+		padding: 14px;
+	}
 }

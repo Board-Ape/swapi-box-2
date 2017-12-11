@@ -1,5 +1,6 @@
 import React from 'react';
 import './Header.css';
+import PropTypes from 'prop-types';
 
 const Header = ({handleUpdateState, numberOfFavorites}) => {
 
@@ -15,6 +16,11 @@ const Header = ({handleUpdateState, numberOfFavorites}) => {
 			</div>
 		</div>
 	);
+};
+
+Header.propTypes = {
+  handleUpdateState: PropTypes.func,
+  numberOfFavorites: PropTypes.number
 };
 
 export default Header;

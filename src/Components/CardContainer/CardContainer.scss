@@ -16,29 +16,5 @@
   justify-content: center;
   display: flex;
   flex-wrap: wrap;
-  margin-top: 352px;
-}
-
-@media screen and (max-width: 1599px) {
-	.card-container-component {
-		width: 1280px;
-	}
-}
-
-@media screen and (max-width: 1279px) {
-	.card-container-component {
-		width: 960px;
-	}
-}
-
-@media screen and (max-width: 959px) {
-	.card-container-component {
-		width: 640px;
-	}
-}
-
-@media screen and (max-width: 639px) {
-	.card-container-component {
-		width: 320px;
-	}
+  margin-top: 360px;
 }

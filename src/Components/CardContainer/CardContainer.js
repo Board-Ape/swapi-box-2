@@ -22,7 +22,7 @@ const CardContainer = ({containerTitle, favoriteCard, active, items}) => {
 									 cardType={item.cardType}
 									 favoriteStatus={item.favorite}
 	                 favoriteCard={favoriteCard} />
-		})
+		});
 
 	return (
 		<div className="card-container-component">
@@ -31,7 +31,7 @@ const CardContainer = ({containerTitle, favoriteCard, active, items}) => {
 				{currentDisplay}
 			</div>
 		</div>
-	)
-}
+	);
+};
 
 export default CardContainer;

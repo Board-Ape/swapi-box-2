@@ -1,4 +1,4 @@
-{
+module.exports = {
   "parser": "babel-eslint",
   "extends": [
     "eslint:recommended",
@@ -9,7 +9,7 @@
   ],
   "env": {
     "browser": true,
-    "mocha": true,
+    "jest": true,
     "node": true,
     "es6": true
   },
@@ -29,8 +29,8 @@
     "comma-style": ["error", "last"],
     "computed-property-spacing": ["error", "never"],
     "func-call-spacing": ["error", "never"],
-    "keyword-spacing": ["error", { "before": true, "after": true }],  
-    "max-len": ["warn", 80],
+    "keyword-spacing": ["error", { "before": true, "after": true }],
+    "max-len": ["warn", 100],
     "no-duplicate-imports": "error",
     "id-length": "error",
     "id-blacklist": ["error", "data", "err", "e", "cb", "callback", "payload", "obj", "arr"],

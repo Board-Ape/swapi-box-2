@@ -1,15 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { configure, shallow, mount } from 'enzyme';
-import Card from './Card';
+import CardContainer from './CardContainer';
 import Adapter from 'enzyme-adapter-react-15';
 
 configure({ adapter: new Adapter() });
 
-describe('Card test', () => {
+describe.skip('CardContainer test', () => {
   it('should render correctly', () => {
-    const renderedCard = shallow(<Card />);
+    const renderedCardContainer = shallow(<CardContainer />);
 
-    expect(renderedCard.find('.card-component').length).toEqual(1);
+    expect(renderedCardContainer.find('.CardContainer').length).toEqual(1);
   });
 });

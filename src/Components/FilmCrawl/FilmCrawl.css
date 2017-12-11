@@ -25,8 +25,9 @@
 .film-crawl {
   position: absolute;
   width: 18em;
-  height: 50em;
+  height: 18em;
   bottom: 0;
+  top: -360px;
   left: 50%;
   margin-left: -9em;
   font-size: 350%;

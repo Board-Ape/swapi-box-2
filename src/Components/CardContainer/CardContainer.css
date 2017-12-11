@@ -1,8 +1,31 @@
 .card-container-component {
-  text-align: center;
-  color: #fff; }
+  position: relative;
+  z-index: 10;
+  width: 1600px;
+  margin: auto; }
+  .card-container-component h2 {
+    text-align: center;
+    color: #fff; }
 
 .card-container {
+  background-color: black;
+  justify-content: center;
   display: flex;
   flex-wrap: wrap;
-  background-color: black; }
+  margin-top: 352px; }
+
+@media screen and (max-width: 1599px) {
+  .card-container-component {
+    width: 1280px; } }
+
+@media screen and (max-width: 1279px) {
+  .card-container-component {
+    width: 960px; } }
+
+@media screen and (max-width: 959px) {
+  .card-container-component {
+    width: 640px; } }
+
+@media screen and (max-width: 639px) {
+  .card-container-component {
+    width: 320px; } }

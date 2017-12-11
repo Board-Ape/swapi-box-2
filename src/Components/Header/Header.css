@@ -1,2 +1,46 @@
 .header-component {
-  background-color: yellow; }
+  width: 1273px;
+  margin: auto;
+  background-color: #004C96; }
+  .header-component h1 {
+    color: #fff;
+    text-align: center; }
+  .header-component .logo {
+    background-image: url("x-wing.svg");
+    width: 300px;
+    height: 162px;
+    background-repeat: no-repeat;
+    padding-top: 30px;
+    margin: 0 auto; }
+  .header-component .header-title {
+    font-size: 40px; }
+  .header-component .header-buttons {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 9px; }
+  .header-component button {
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #5195D9;
+    height: 40px;
+    width: 220px;
+    font-family: 'Spectral SC', serif;
+    font-weight: 900;
+    position: relative;
+    font-size: 20px;
+    color: #fff;
+    overflow: hidden;
+    cursor: pointer;
+    padding-top: 4px;
+    border-radius: 20px; }
+  .header-component button:hover {
+    background-color: rgba(42, 252, 255, 0.8);
+    box-shadow: 0px 0px 56px -6px #dbe2ff; }
+  .header-component span {
+    position: absolute;
+    right: 0;
+    top: -5px;
+    background-color: rgba(0, 93, 94, 0.5);
+    padding: 14px; }

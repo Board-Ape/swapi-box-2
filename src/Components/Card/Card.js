@@ -3,10 +3,10 @@ import './Card.css';
 
 const Card = ({name, lineOne, lineTwo, lineThree, lineFour, id, cardType, favoriteStatus, favoriteCard}) => {
 
-	const lineOneTitle = ['Homeworld: ', 'Terrain: ', 'Model: ']
-	const lineTwoTitle = ['Species: ', 'Population: ', 'Class: ']
-	const lineThreeTitle = ['Homeworld Population: ', 'Climate: ', 'Passengers: ']
-	const lineFourTitle = ['', 'Known Residents: ', '']
+	const lineOneTitle = ['Homeworld: ', 'Terrain: ', 'Model: '];
+	const lineTwoTitle = ['Species: ', 'Population: ', 'Class: '];
+	const lineThreeTitle = ['Homeworld Population: ', 'Climate: ', 'Passengers: '];
+	const lineFourTitle = ['', 'Known Residents: ', ''];
 
 	let cardDisplay = (
 		<div className="card-display">
@@ -21,13 +21,13 @@ const Card = ({name, lineOne, lineTwo, lineThree, lineFour, id, cardType, favori
 				className={ favoriteStatus === false ? 'star-outline' : 'star-solid' }
 			></button>
 		</div>
-	)
+	);
 
 	return (
 		<div className={ favoriteStatus === false ? 'card-component' : 'card-component fave-card'}>
 			{cardDisplay}
 		</div>
-	)
-}
+	);
+};
 
 export default Card;

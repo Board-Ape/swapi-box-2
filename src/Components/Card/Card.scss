@@ -1,14 +1,14 @@
 .card-component {
 	background-color: #EFA877;
-	width: 400px;
-	height: 399px;
+	width: 600px;
+	height: 600px;
 	padding: 20px;
 	margin: 10px;
 	border-radius: 25px;
 	position: relative;
 
 	.card-header-box {
-		height: 40px;
+		height: 70px;
 		display: flex;
 		align-items: center;
 		justify-content: left;
@@ -16,15 +16,16 @@
 
 	h3 {
 		color: #fff;
-		font-size: 22px;
+		font-size: 26px;
 		width: 171px;
 		overflow: scroll;
 		height: 64px;
-		padding: 3px 0;
+		padding: 3px;
+		padding-bottom: 5px;
 	}
 
 	h4 {
-		font-size: 19px;
+		font-size: 26px;
 		color: #fff;
 		line-height: 1.4;
 	}

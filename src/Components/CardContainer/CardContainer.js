@@ -27,7 +27,6 @@ const CardContainer = ({favoriteCard, active, items}) => {
 
   return (
     <div className="card-container-component">
-
       <div className="card-container">
         {currentDisplay}
       </div>

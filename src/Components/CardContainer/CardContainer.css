@@ -1,15 +1,16 @@
 .card-container-component {
   position: relative;
   z-index: 10;
-  width: 1600px;
   margin: auto; }
   .card-container-component h2 {
     text-align: center;
     color: #fff; }
 
 .card-container {
+  margin: auto;
   background-color: black;
   justify-content: center;
+  width: 80%;
   display: flex;
   flex-wrap: wrap;
   margin-top: 360px; }
